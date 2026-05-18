@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHUKET — Full Guide 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocean: #0ABFBC;
+    --sunset: #F97316;
+    --sunset-warm: #FB923C;
+    --gold: #D4A853;
+    --palm: #4ADE80;
+    --black: #0A0A0A;
+    --off-white: #F8F6F1;
+    --neon-pink: #FF2D78;
+    --neon-purple: #BF5FFF;
+    --neon-cyan: #00F5FF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--off-white);
+    overflow-x: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ── NAV ── */
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 0 20px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .top-nav::-webkit-scrollbar { display: none; }
+
+  .nav-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.4);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 16px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-btn:hover, .nav-btn.active {
+    color: var(--ocean);
+    border-bottom-color: var(--ocean);
+  }
+  .nav-back {
+    color: rgba(255,255,255,0.3);
+    font-size: 10px;
+    padding: 16px 16px 16px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    background: none;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    margin-right: 8px;
+  }
+
+  /* ── COVER ── */
+  .guide-cover {
+    padding: 60px 24px 48px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, #000d1a 0%, #001020 60%, #050500 100%);
+    text-align: center;
+  }
+
+  .guide-cover-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 100%, rgba(10,191,188,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 30% at 20% 50%, rgba(249,115,22,0.07) 0%, transparent 60%);
+  }
+
+  .guide-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--ocean);
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .guide-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 15vw, 100px);
+    line-height: 0.9;
+    letter-spacing: 0.04em;
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 40%, var(--ocean) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .guide-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(255,255,255,0.4);
+    position: relative;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    padding: 56px 24px 28px;
+    position: relative;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 10vw, 64px);
+    letter-spacing: 0.03em;
+    line-height: 0.95;
+  }
+
+  .section-line {
+    width: 48px;
+    height: 2px;
+    border-radius: 2px;
+    margin-top: 14px;
+  }
+
+  /* ── ACTIVITY GRID ── */
+  .activity-grid {
+    padding: 0 20px 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @media (min-width: 600px) {
+    .activity-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .activity-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 14px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: background 0.25s, border-color 0.25s;
+  }
+
+  .activity-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(10,191,188,0.25);
+  }
+
+  .activity-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .activity-name {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .activity-type {
+    font-size: 10px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.08em;
+    margin-top: 3px;
+  }
+
+  /* ── RESTAURANT / CAFE CARDS ── */
+  .list-container {
+    padding: 0 20px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .place-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: background 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .place-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.14);
+  }
+
+  .place-rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    color: rgba(255,255,255,0.12);
+    width: 28px;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .place-info { flex: 1; min-width: 0; }
+
+  .place-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .place-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .place-type {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .place-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    flex-shrink: 0;
+  }
+
+  .place-area {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .place-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
+
+  .reviews-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .reviews-label {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-top: 2px;
+  }
+
+  /* Top 3 highlight */
+  .place-card.top-1 { border-color: rgba(212,168,83,0.3); background: rgba(212,168,83,0.05); }
+  .place-card.top-2 { border-color: rgba(192,192,192,0.2); background: rgba(192,192,192,0.03); }
+  .place-card.top-3 { border-color: rgba(180,120,70,0.2); background: rgba(180,120,70,0.03); }
+  .place-card.top-1 .place-rank { color: var(--gold); }
+  .place-card.top-2 .place-rank { color: rgba(192,192,192,0.6); }
+  .place-card.top-3 .place-rank { color: rgba(180,120,70,0.5); }
+  .place-card.top-1 .reviews-num { color: var(--gold); }
+  .place-card.top-2 .reviews-num { color: rgba(192,192,192,0.7); }
+  .place-card.top-3 .reviews-num { color: rgba(180,120,70,0.6); }
+
+  .reviews-num.ocean { color: var(--ocean); }
+
+  /* ── NIGHTLIFE CARDS ── */
+  .nightlife-grid {
+    padding: 0 20px 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  @media (min-width: 500px) {
+    .nightlife-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .night-card {
+    border-radius: 16px;
+    padding: 18px 18px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid;
+  }
+
+  .night-card-glow {
+    position: absolute; inset: 0;
+    pointer-events: none;
+  }
+
+  .night-card-content { position: relative; z-index: 1; }
+
+  .night-icon { font-size: 24px; margin-bottom: 10px; }
+
+  .night-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .night-type {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Nightclub */
+  .type-club {
+    background: linear-gradient(135deg, #0d0017 0%, #120020 100%);
+    border-color: rgba(191,95,255,0.25);
+  }
+  .type-club .night-card-glow {
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(191,95,255,0.1) 0%, transparent 70%);
+  }
+  .type-club .night-type { color: var(--neon-purple); }
+
+  /* Beach Club */
+  .type-beach {
+    background: linear-gradient(135deg, #00101a 0%, #001520 100%);
+    border-color: rgba(10,191,188,0.25);
+  }
+  .type-beach .night-card-glow {
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(10,191,188,0.08) 0%, transparent 70%);
+  }
+  .type-beach .night-type { color: var(--ocean); }
+
+  /* Shisha / Lounge */
+  .type-lounge {
+    background: linear-gradient(135deg, #100a00 0%, #150d00 100%);
+    border-color: rgba(212,168,83,0.25);
+  }
+  .type-lounge .night-card-glow {
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(212,168,83,0.08) 0%, transparent 70%);
+  }
+  .type-lounge .night-type { color: var(--gold); }
+
+  /* Adult */
+  .type-adult {
+    background: linear-gradient(135deg, #150005 0%, #180008 100%);
+    border-color: rgba(255,45,120,0.2);
+  }
+  .type-adult .night-card-glow {
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,45,120,0.07) 0%, transparent 70%);
+  }
+  .type-adult .night-type { color: var(--neon-pink); }
+
+  /* ── DIVIDER ── */
+  .fancy-divider {
+    height: 1px;
+    margin: 0 24px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent);
+  }
+
+  /* ── FOOTER ── */
+  .guide-footer {
+    padding: 48px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .footer-names {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.12em;
+    background: linear-gradient(90deg, var(--sunset), var(--gold), var(--ocean));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 6px;
+  }
+
+  .footer-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* fade-in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="top-nav">
+  <a href="phuket-itinerary.html" style="text-decoration:none;">
+    <button class="nav-back">← Itinerary</button>
+  </a>
+  <button class="nav-btn active" onclick="scrollTo(0,0)">Guide</button>
+  <button class="nav-btn" onclick="document.getElementById('activities').scrollIntoView({behavior:'smooth'})">Activities</button>
+  <button class="nav-btn" onclick="document.getElementById('restaurants').scrollIntoView({behavior:'smooth'})">Restaurants</button>
+  <button class="nav-btn" onclick="document.getElementById('cafes').scrollIntoView({behavior:'smooth'})">Cafés</button>
+  <button class="nav-btn" onclick="document.getElementById('nightlife').scrollIntoView({behavior:'smooth'})">Nightlife</button>
+</nav>
+
+<!-- ── COVER ── -->
+<section class="guide-cover">
+  <div class="guide-cover-glow"></div>
+  <div class="guide-eyebrow">🌴 Ali · Maitham · Ramy · Phuket 2026</div>
+  <div class="guide-title">FULL<br>GUIDE</div>
+  <div class="guide-sub">Everything you need to know about Phuket</div>
+</section>
+
+<!-- ══════════════════════════════════
+     ACTIVITIES
+══════════════════════════════════ -->
+<section id="activities" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--ocean);">🏄 Explore</div>
+    <div class="section-title" style="color: white;">Activities &<br>Sightseeing</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--ocean), transparent);"></div>
+  </div>
+
+  <div class="activity-grid">
+
+    <div class="activity-card">
+      <div class="activity-icon">🏖️</div>
+      <div>
+        <div class="activity-name">Patong Beach</div>
+        <div class="activity-type">Beach</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🌊</div>
+      <div>
+        <div class="activity-name">Karon Beach</div>
+        <div class="activity-type">Beach</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🏔️</div>
+      <div>
+        <div class="activity-name">Karon Viewpoint</div>
+        <div class="activity-type">Scenic Spot</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🏝️</div>
+      <div>
+        <div class="activity-name">Phi Phi Islands</div>
+        <div class="activity-type">Island Tour</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🎬</div>
+      <div>
+        <div class="activity-name">Maya Bay</div>
+        <div class="activity-type">Iconic Bay</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🐒</div>
+      <div>
+        <div class="activity-name">Monkey Bay</div>
+        <div class="activity-type">Wildlife · Snorkel</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🌃</div>
+      <div>
+        <div class="activity-name">Bangla Road</div>
+        <div class="activity-type">Nightlife Strip</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🏛️</div>
+      <div>
+        <div class="activity-name">Phuket Old Town</div>
+        <div class="activity-type">Culture · Heritage</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🎨</div>
+      <div>
+        <div class="activity-name">Street Art Alley</div>
+        <div class="activity-type">Street Art</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🛍️</div>
+      <div>
+        <div class="activity-name">Naka Weekend Market</div>
+        <div class="activity-type">Market · Sat–Sun</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🏮</div>
+      <div>
+        <div class="activity-name">Chillva Market</div>
+        <div class="activity-type">Night Market</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">💦</div>
+      <div>
+        <div class="activity-name">Andamanda Phuket</div>
+        <div class="activity-type">Waterpark</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🌿</div>
+      <div>
+        <div class="activity-name">Hanuman World</div>
+        <div class="activity-type">Zipline · Jungle</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🏎️</div>
+      <div>
+        <div class="activity-name">Hanuman Luge</div>
+        <div class="activity-type">Luge Track</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🛕</div>
+      <div>
+        <div class="activity-name">Big Buddha Phuket</div>
+        <div class="activity-type">Sacred Site</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🏊</div>
+      <div>
+        <div class="activity-name">Yona Beach Club</div>
+        <div class="activity-type">Beach Club</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🎵</div>
+      <div>
+        <div class="activity-name">Cafe Del Mar</div>
+        <div class="activity-type">Beach Club</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🌅</div>
+      <div>
+        <div class="activity-name">Nomad Beach Club</div>
+        <div class="activity-type">Beach Club</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🚣</div>
+      <div>
+        <div class="activity-name">Le Rafting</div>
+        <div class="activity-type">White Water Rafting</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🌄</div>
+      <div>
+        <div class="activity-name">Promthep Cape</div>
+        <div class="activity-type">Sunset Viewpoint</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🏝️</div>
+      <div>
+        <div class="activity-name">Freedom Beach</div>
+        <div class="activity-type">Hidden Beach</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🌴</div>
+      <div>
+        <div class="activity-name">Mai Khao Beach</div>
+        <div class="activity-type">Beach · Quiet</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">⛵</div>
+      <div>
+        <div class="activity-name">James Bond Island</div>
+        <div class="activity-type">Day Trip · Phang Nga</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🐠</div>
+      <div>
+        <div class="activity-name">Similan Islands</div>
+        <div class="activity-type">Diving · Snorkeling</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🐘</div>
+      <div>
+        <div class="activity-name">Phuket Elephant Sanctuary</div>
+        <div class="activity-type">Wildlife · Ethical</div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-icon">🎪</div>
+      <div>
+        <div class="activity-name">Carnival Magic</div>
+        <div class="activity-type">Theme Park · Shows</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="fancy-divider"></div>
+
+<!-- ══════════════════════════════════
+     RESTAURANTS
+══════════════════════════════════ -->
+<section id="restaurants" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--sunset);">🍽️ Ranked by Reviews</div>
+    <div class="section-title" style="color: white;">Restaurants</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--sunset), transparent);"></div>
+  </div>
+
+  <div class="list-container">
+
+    <div class="place-card top-1">
+      <div class="place-rank">1</div>
+      <div class="place-info">
+        <div class="place-name">Madam Tandoori Al Hindi</div>
+        <div class="place-meta">
+          <span class="place-type">Indian</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num" style="color:var(--gold)">22.2K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-2">
+      <div class="place-rank">2</div>
+      <div class="place-info">
+        <div class="place-name">Three Monkeys Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Thai Fusion · Jungle</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Near Hanuman World</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num" style="color:rgba(192,192,192,0.7)">14.4K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-3">
+      <div class="place-rank">3</div>
+      <div class="place-info">
+        <div class="place-name">Sultan's Grill</div>
+        <div class="place-meta">
+          <span class="place-type">Turkish · Indian</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num" style="color:rgba(180,120,70,0.7)">11.2K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">4</div>
+      <div class="place-info">
+        <div class="place-name">Cappadocia Turkish Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Turkish · Middle Eastern</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">10.1K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">5</div>
+      <div class="place-info">
+        <div class="place-name">Amritsr Restaurant Patong</div>
+        <div class="place-meta">
+          <span class="place-type">Indian</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">9.9K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">6</div>
+      <div class="place-info">
+        <div class="place-name">Amritsr Restaurant Kalim Beach</div>
+        <div class="place-meta">
+          <span class="place-type">Indian</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Near Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">9.4K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">7</div>
+      <div class="place-info">
+        <div class="place-name">Little Roma</div>
+        <div class="place-meta">
+          <span class="place-type">Italian · European</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">9.2K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">8</div>
+      <div class="place-info">
+        <div class="place-name">Amritsr Old Town</div>
+        <div class="place-meta">
+          <span class="place-type">Indian</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">7.5K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">9</div>
+      <div class="place-info">
+        <div class="place-name">Maroosh Kamala</div>
+        <div class="place-meta">
+          <span class="place-type">Arabic · Middle Eastern</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Kamala</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">7.3K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">10</div>
+      <div class="place-info">
+        <div class="place-name">Maroosh</div>
+        <div class="place-meta">
+          <span class="place-type">Arabic · Middle Eastern</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">6.9K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">11</div>
+      <div class="place-info">
+        <div class="place-name">Zuri Restaurant Patong Beach</div>
+        <div class="place-meta">
+          <span class="place-type">Fusion · International</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">6.7K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">12</div>
+      <div class="place-info">
+        <div class="place-name">Little Paris</div>
+        <div class="place-meta">
+          <span class="place-type">French · European</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">6.6K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">13</div>
+      <div class="place-info">
+        <div class="place-name">One Chun Cafe & Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Thai</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">6.4K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">14</div>
+      <div class="place-info">
+        <div class="place-name">Naughty Nuri's Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">BBQ · Asian</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">5.9K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">15</div>
+      <div class="place-info">
+        <div class="place-name">Meg Khram The Sunshine Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Seafood · Sunset</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">5.6K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">16</div>
+      <div class="place-info">
+        <div class="place-name">No.6 Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Thai</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">5.5K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">17</div>
+      <div class="place-info">
+        <div class="place-name">Tu Kab Khao</div>
+        <div class="place-meta">
+          <span class="place-type">Thai</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">4.5K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">18</div>
+      <div class="place-info">
+        <div class="place-name">Savoey Seafood Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Seafood</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">4.3K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">19</div>
+      <div class="place-info">
+        <div class="place-name">Day & Night Of Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">Fusion</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">4.3K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">20</div>
+      <div class="place-info">
+        <div class="place-name">Patong Social Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">Thai + Indian</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">4.2K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">21</div>
+      <div class="place-info">
+        <div class="place-name">Fuk Turk Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">Turkish</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">4.1K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">22</div>
+      <div class="place-info">
+        <div class="place-name">Raya Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Thai</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">3.3K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">23</div>
+      <div class="place-info">
+        <div class="place-name">Blue Elephant Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">Royal Thai</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">3.1K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">24</div>
+      <div class="place-info">
+        <div class="place-name">On The Rock Restaurant</div>
+        <div class="place-meta">
+          <span class="place-type">Thai · Seafood</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Karon</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">1.4K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="fancy-divider"></div>
+
+<!-- ══════════════════════════════════
+     CAFES
+══════════════════════════════════ -->
+<section id="cafes" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--gold);">☕ Ranked by Reviews</div>
+    <div class="section-title" style="color: white;">Cafés</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--gold), transparent);"></div>
+  </div>
+
+  <div class="list-container">
+
+    <div class="place-card top-1">
+      <div class="place-rank">1</div>
+      <div class="place-info">
+        <div class="place-name">Cafe Phuket Viewpoint</div>
+        <div class="place-meta">
+          <span class="place-type">Viewpoint Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Karon</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num" style="color:var(--gold)">19.6K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-2">
+      <div class="place-rank">2</div>
+      <div class="place-info">
+        <div class="place-name">The Coffee Club Jungceylon</div>
+        <div class="place-meta">
+          <span class="place-type">Premium Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num" style="color:rgba(192,192,192,0.7)">10K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-3">
+      <div class="place-rank">3</div>
+      <div class="place-info">
+        <div class="place-name">Boost Cafe</div>
+        <div class="place-meta">
+          <span class="place-type">Café · Smoothies</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num" style="color:rgba(180,120,70,0.7)">4.5K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">4</div>
+      <div class="place-info">
+        <div class="place-name">The Coffee Club OZO Kata</div>
+        <div class="place-meta">
+          <span class="place-type">Premium Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Kata</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">3.8K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">5</div>
+      <div class="place-info">
+        <div class="place-name">The Coffee Club Ashley Patong</div>
+        <div class="place-meta">
+          <span class="place-type">Premium Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">3.5K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">6</div>
+      <div class="place-info">
+        <div class="place-name">The Cozy Cafe Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Karon</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">3.2K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">7</div>
+      <div class="place-info">
+        <div class="place-name">PockeTic Coffee Bar</div>
+        <div class="place-meta">
+          <span class="place-type">Specialty Coffee</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">3.1K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">8</div>
+      <div class="place-info">
+        <div class="place-name">Tapas Cafe Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">Café · Tapas</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">3.0K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">9</div>
+      <div class="place-info">
+        <div class="place-name">Hilltop Cafe</div>
+        <div class="place-meta">
+          <span class="place-type">Café · Views</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Patong</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">2.9K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">10</div>
+      <div class="place-info">
+        <div class="place-name">The Neighbors Cafe</div>
+        <div class="place-meta">
+          <span class="place-type">Specialty Coffee</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">2.6K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">11</div>
+      <div class="place-info">
+        <div class="place-name">WeCafe Chaofa</div>
+        <div class="place-meta">
+          <span class="place-type">Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Wichit</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">2.6K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">12</div>
+      <div class="place-info">
+        <div class="place-name">Lost in Phuket</div>
+        <div class="place-meta">
+          <span class="place-type">Aesthetic Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phuket Old Town</span>
+        </div>
+      </div>
+      <div class="place-reviews">
+        <div class="reviews-num ocean">2.3K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="fancy-divider"></div>
+
+<!-- ══════════════════════════════════
+     NIGHTLIFE
+══════════════════════════════════ -->
+<section id="nightlife" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--neon-pink);">🌃 After Dark</div>
+    <div class="section-title" style="color: white;">Nightlife &<br>Beach Clubs</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--neon-pink), transparent);"></div>
+  </div>
+
+  <div class="nightlife-grid">
+
+    <div class="night-card type-club">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🎵</div>
+        <div class="night-name">Illuzion Phuket</div>
+        <div class="night-type">Nightclub · Bangla Road</div>
+      </div>
+    </div>
+
+    <div class="night-card type-club">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">👑</div>
+        <div class="night-name">Harem Club Phuket</div>
+        <div class="night-type">Nightclub · Bangla Road</div>
+      </div>
+    </div>
+
+    <div class="night-card type-beach">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🏊</div>
+        <div class="night-name">Yona Beach Club</div>
+        <div class="night-type">Beach Club · Kamala</div>
+      </div>
+    </div>
+
+    <div class="night-card type-beach">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🎶</div>
+        <div class="night-name">Cafe Del Mar Phuket</div>
+        <div class="night-type">Beach Club · Kamala</div>
+      </div>
+    </div>
+
+    <div class="night-card type-beach">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🌅</div>
+        <div class="night-name">Nomad Beach Club</div>
+        <div class="night-type">Beach Club · Phuket</div>
+      </div>
+    </div>
+
+    <div class="night-card type-lounge">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">💨</div>
+        <div class="night-name">Majestic Lounge Phuket</div>
+        <div class="night-type">Hookah Lounge · Shisha</div>
+      </div>
+    </div>
+
+    <div class="night-card type-lounge">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🌙</div>
+        <div class="night-name">Grand Tarbouche Phuket</div>
+        <div class="night-type">Arabic Lounge · Shisha</div>
+      </div>
+    </div>
+
+    <div class="night-card type-adult">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🔞</div>
+        <div class="night-name">Suzie Wong's A Go-Go</div>
+        <div class="night-type">Adult Entertainment · Bangla</div>
+      </div>
+    </div>
+
+    <div class="night-card type-adult">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🔞</div>
+        <div class="night-name">Suzie Wong's 2 — Devil's Playground</div>
+        <div class="night-type">Adult Entertainment · Bangla</div>
+      </div>
+    </div>
+
+    <div class="night-card type-adult">
+      <div class="night-card-glow"></div>
+      <div class="night-card-content">
+        <div class="night-icon">🔞</div>
+        <div class="night-name">Suzie Wong's 3</div>
+        <div class="night-type">Adult Entertainment · Bangla</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<div class="guide-footer fade-in">
+  <div class="footer-names">Ali · Maitham · Ramy</div>
+  <div class="footer-sub">Phuket, Thailand · May 2026 🌴</div>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
