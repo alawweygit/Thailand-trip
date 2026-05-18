@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BANGKOK — Full Guide 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bkk-gold: #E8B84B;
+    --bkk-red: #E53935;
+    --bkk-purple: #7C3AED;
+    --bkk-rose: #F43F5E;
+    --ocean: #0ABFBC;
+    --palm: #4ADE80;
+    --black: #0A0A0A;
+    --off-white: #F8F6F1;
+    --neon-pink: #FF2D78;
+    --neon-purple: #BF5FFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--off-white);
+    overflow-x: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ── NAV ── */
+  .top-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,10,0.93);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 0 20px;
+    display: flex; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .top-nav::-webkit-scrollbar { display: none; }
+
+  .nav-home {
+    display: flex; align-items: center; gap: 8px;
+    padding: 14px 14px 14px 0;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    margin-right: 10px;
+    text-decoration: none; flex-shrink: 0;
+  }
+  .nav-home-dot { width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, var(--bkk-gold), var(--ocean)); }
+  .nav-home-text { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+
+  .nav-back {
+    background: none; border: none;
+    color: rgba(255,255,255,0.35);
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 16px 14px; cursor: pointer;
+    white-space: nowrap;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none; display: inline-block;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    margin-right: 8px;
+  }
+  .nav-btn {
+    background: none; border: none;
+    color: rgba(255,255,255,0.35);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 16px 13px; cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-btn:hover { color: var(--bkk-gold); border-bottom-color: var(--bkk-gold); }
+
+  /* ── COVER ── */
+  .guide-cover {
+    padding: 56px 24px 44px;
+    position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #0d0600 0%, #0a0500 55%, #070010 100%);
+    text-align: center;
+  }
+  .guide-cover-glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 100%, rgba(232,184,75,0.1) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 30% at 85% 30%, rgba(228,57,53,0.06) 0%, transparent 60%);
+  }
+  .guide-eyebrow { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--bkk-gold); margin-bottom: 10px; position: relative; }
+  .guide-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 14vw, 96px); line-height: 0.9; letter-spacing: 0.04em;
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.75) 40%, var(--bkk-gold) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    position: relative; margin-bottom: 8px;
+  }
+  .guide-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: rgba(255,255,255,0.38); position: relative; }
+
+  /* ── SECTION HEADER ── */
+  .section-header { padding: 52px 24px 26px; }
+  .section-label { font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; margin-bottom: 8px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px, 10vw, 60px); letter-spacing: 0.03em; line-height: 0.95; }
+  .section-line { width: 46px; height: 2px; border-radius: 2px; margin-top: 13px; }
+
+  /* ── ACTIVITY GRID ── */
+  .activity-grid {
+    padding: 0 20px 44px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  @media (min-width: 540px) { .activity-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .activity-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 14px;
+    display: flex; align-items: flex-start; gap: 10px;
+    transition: background 0.25s, border-color 0.25s;
+  }
+  .activity-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(232,184,75,0.22); }
+  .activity-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .activity-name { font-size: 13px; font-weight: 500; line-height: 1.3; color: rgba(255,255,255,0.85); }
+  .activity-reviews { font-size: 10px; color: var(--bkk-gold); margin-top: 3px; }
+
+  /* ── RANKED CARDS ── */
+  .list-container { padding: 0 20px 44px; display: flex; flex-direction: column; gap: 8px; }
+
+  .place-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 13px 16px;
+    display: flex; align-items: center; gap: 14px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .place-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.13); }
+  .place-card.top-1 { border-color: rgba(232,184,75,0.32); background: rgba(232,184,75,0.05); }
+  .place-card.top-2 { border-color: rgba(200,200,200,0.2); background: rgba(200,200,200,0.03); }
+  .place-card.top-3 { border-color: rgba(180,120,70,0.2); background: rgba(180,120,70,0.03); }
+
+  .place-rank { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: rgba(255,255,255,0.1); width: 26px; flex-shrink: 0; text-align: center; line-height: 1; }
+  .place-card.top-1 .place-rank { color: var(--bkk-gold); }
+  .place-card.top-2 .place-rank { color: rgba(200,200,200,0.55); }
+  .place-card.top-3 .place-rank { color: rgba(180,120,70,0.55); }
+
+  .place-info { flex: 1; min-width: 0; }
+  .place-name { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); line-height: 1.3; margin-bottom: 4px; }
+  .place-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .place-type { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.32); }
+  .place-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.18); }
+  .place-area { font-size: 10px; color: rgba(255,255,255,0.28); }
+
+  .place-reviews-col { flex-shrink: 0; text-align: right; }
+  .reviews-num { font-family: 'Bebas Neue', sans-serif; font-size: 18px; line-height: 1; color: var(--bkk-gold); }
+  .place-card.top-1 .reviews-num { color: var(--bkk-gold); }
+  .place-card.top-2 .reviews-num { color: rgba(200,200,200,0.65); }
+  .place-card.top-3 .reviews-num { color: rgba(180,120,70,0.65); }
+  .reviews-label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-top: 2px; }
+
+  /* ── ROOFTOP SPECIAL CARDS ── */
+  .rooftop-grid { padding: 0 20px 44px; display: flex; flex-direction: column; gap: 9px; }
+
+  .rooftop-card {
+    background: linear-gradient(135deg, #080010 0%, #0d0015 100%);
+    border: 1px solid rgba(124,58,237,0.2);
+    border-radius: 16px; padding: 16px 18px;
+    display: flex; align-items: center; gap: 14px;
+    position: relative; overflow: hidden;
+    transition: border-color 0.25s;
+  }
+  .rooftop-card:hover { border-color: rgba(124,58,237,0.4); }
+  .rooftop-card-glow {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 60% 60% at 0% 50%, rgba(232,184,75,0.05) 0%, transparent 70%);
+  }
+  .rooftop-card-content { position: relative; z-index: 1; flex: 1; min-width: 0; }
+  .rooftop-icon { font-size: 22px; flex-shrink: 0; position: relative; z-index: 1; }
+  .rooftop-name { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); line-height: 1.3; margin-bottom: 4px; }
+  .rooftop-meta { display: flex; gap: 6px; align-items: center; }
+  .rooftop-type { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #A78BFA; }
+  .rooftop-reviews { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: var(--bkk-gold); flex-shrink: 0; position: relative; z-index: 1; }
+
+  /* ── NIGHTLIFE / MASSAGE GRID ── */
+  .two-col-grid { padding: 0 20px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 400px) { .two-col-grid { grid-template-columns: 1fr; } }
+
+  .special-card {
+    border-radius: 16px; padding: 16px 16px;
+    position: relative; overflow: hidden; border: 1px solid;
+    transition: border-color 0.25s;
+  }
+  .special-card-glow { position: absolute; inset: 0; pointer-events: none; }
+  .special-content { position: relative; z-index: 1; }
+  .special-icon { font-size: 22px; margin-bottom: 10px; }
+  .special-name { font-size: 13px; font-weight: 500; line-height: 1.3; margin-bottom: 5px; }
+  .special-type { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .special-reviews { font-family: 'Bebas Neue', sans-serif; font-size: 15px; margin-top: 6px; color: var(--bkk-gold); }
+
+  .type-nightclub { background: linear-gradient(135deg, #0d0017 0%, #100020 100%); border-color: rgba(191,95,255,0.22); }
+  .type-nightclub .special-type { color: var(--neon-purple); }
+  .type-massage { background: linear-gradient(135deg, #001208 0%, #001a0a 100%); border-color: rgba(74,222,128,0.2); }
+  .type-massage .special-type { color: #4ADE80; }
+  .type-cafe-lux { background: linear-gradient(135deg, #0d0800 0%, #120a00 100%); border-color: rgba(232,184,75,0.22); }
+  .type-cafe-lux .special-type { color: var(--bkk-gold); }
+
+  /* ── DIVIDER ── */
+  .fancy-divider { height: 1px; margin: 0 24px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent); }
+
+  /* ── FOOTER ── */
+  .guide-footer { padding: 44px 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+  .footer-names {
+    font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.12em;
+    background: linear-gradient(90deg, var(--bkk-gold), var(--bkk-red), var(--bkk-gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 6px;
+  }
+  .footer-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: rgba(255,255,255,0.28); }
+  .footer-links { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+  .f-link {
+    text-decoration: none; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 9px 20px; border-radius: 100px; transition: background 0.2s;
+  }
+  .f-link-itinerary { background: rgba(232,184,75,0.1); border: 1px solid rgba(232,184,75,0.28); color: var(--bkk-gold); }
+  .f-link-home { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.38); }
+
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.62s ease, transform 0.62s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="top-nav">
+  <a href="index.html" class="nav-home">
+    <div class="nav-home-dot"></div>
+    <span class="nav-home-text">Home</span>
+  </a>
+  <a href="bangkok-itinerary.html" class="nav-back">← Itinerary</a>
+  <button class="nav-btn" onclick="document.getElementById('activities').scrollIntoView({behavior:'smooth'})">Activities</button>
+  <button class="nav-btn" onclick="document.getElementById('restaurants').scrollIntoView({behavior:'smooth'})">Restaurants</button>
+  <button class="nav-btn" onclick="document.getElementById('cafes').scrollIntoView({behavior:'smooth'})">Cafés</button>
+  <button class="nav-btn" onclick="document.getElementById('rooftops').scrollIntoView({behavior:'smooth'})">Rooftops</button>
+  <button class="nav-btn" onclick="document.getElementById('more').scrollIntoView({behavior:'smooth'})">More</button>
+</nav>
+
+<!-- ── COVER ── -->
+<section class="guide-cover">
+  <div class="guide-cover-glow"></div>
+  <div class="guide-eyebrow">🏙️ Ali · Maitham · Ramy · Bangkok 2026</div>
+  <div class="guide-title">BANGKOK<br>FULL GUIDE</div>
+  <div class="guide-sub">Everything you need — ranked, organized, ready</div>
+</section>
+
+<!-- ══════ ACTIVITIES ══════ -->
+<section id="activities" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--bkk-gold);">🏛️ Explore</div>
+    <div class="section-title">Activities &<br>Sightseeing</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--bkk-gold), transparent);"></div>
+  </div>
+
+  <div class="activity-grid">
+    <div class="activity-card">
+      <div class="activity-icon">🛕</div>
+      <div>
+        <div class="activity-name">Grand Palace</div>
+        <div class="activity-reviews">⭐ 78,000 reviews</div>
+      </div>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon">🏙️</div>
+      <div>
+        <div class="activity-name">ICONSIAM</div>
+        <div class="activity-reviews">⭐ 57,675 reviews</div>
+      </div>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon">🏮</div>
+      <div>
+        <div class="activity-name">Chinatown Bangkok</div>
+        <div class="activity-reviews">⭐ 32,320 reviews</div>
+      </div>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon">🔭</div>
+      <div>
+        <div class="activity-name">King Power Mahanakhon</div>
+        <div class="activity-reviews">⭐ 28,908 reviews</div>
+      </div>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon">🥳</div>
+      <div>
+        <div class="activity-name">Khao San Road</div>
+        <div class="activity-reviews">⭐ 11,017 reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fancy-divider"></div>
+
+<!-- ══════ RESTAURANTS ══════ -->
+<section id="restaurants" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--bkk-red);">🍽️ Ranked by Reviews</div>
+    <div class="section-title">Restaurants</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--bkk-red), transparent);"></div>
+  </div>
+
+  <div class="list-container">
+    <div class="place-card top-1">
+      <div class="place-rank">1</div>
+      <div class="place-info">
+        <div class="place-name">The One Ratchada</div>
+        <div class="place-meta">
+          <span class="place-type">Food Hall · Street Food</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Ratchada</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num">12.4K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-2">
+      <div class="place-rank">2</div>
+      <div class="place-info">
+        <div class="place-name">Thipsamai Pad Thai</div>
+        <div class="place-meta">
+          <span class="place-type">Thai · Legendary</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Phra Nakhon</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num">12.3K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-3">
+      <div class="place-rank">3</div>
+      <div class="place-info">
+        <div class="place-name">Rongros</div>
+        <div class="place-meta">
+          <span class="place-type">Thai</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num">4.5K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">4</div>
+      <div class="place-info">
+        <div class="place-name">Ta Famille</div>
+        <div class="place-meta">
+          <span class="place-type">French-Thai Fusion</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: var(--bkk-gold);">2.7K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fancy-divider"></div>
+
+<!-- ══════ CAFES ══════ -->
+<section id="cafes" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--bkk-gold);">☕ Ranked by Reviews</div>
+    <div class="section-title">Cafés</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--bkk-gold), transparent);"></div>
+  </div>
+
+  <div class="list-container">
+    <div class="place-card top-1">
+      <div class="place-rank">1</div>
+      <div class="place-info">
+        <div class="place-name">Hong Sieng Kong</div>
+        <div class="place-meta">
+          <span class="place-type">Heritage Café · Aesthetic</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Charoen Krung</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num">~4K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-2">
+      <div class="place-rank">2</div>
+      <div class="place-info">
+        <div class="place-name">% Arabica — Empire Tower</div>
+        <div class="place-meta">
+          <span class="place-type">Specialty Coffee · Minimal</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Sathorn</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num">1.7K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">—</div>
+      <div class="place-info">
+        <div class="place-name">Cafe Amazon Experience Flagship</div>
+        <div class="place-meta">
+          <span class="place-type">Café · Thai Chain</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: var(--bkk-gold);">Iconic</div>
+        <div class="reviews-label">flagship</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">—</div>
+      <div class="place-info">
+        <div class="place-name">LV The Place Bangkok</div>
+        <div class="place-meta">
+          <span class="place-type">Luxury · Louis Vuitton Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Central Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: var(--bkk-gold);">✦</div>
+        <div class="reviews-label">luxury</div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-rank">—</div>
+      <div class="place-info">
+        <div class="place-name">Dior Gold House</div>
+        <div class="place-meta">
+          <span class="place-type">Luxury · Dior Café</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Central Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: var(--bkk-gold);">✦</div>
+        <div class="reviews-label">luxury</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fancy-divider"></div>
+
+<!-- ══════ ROOFTOPS ══════ -->
+<section id="rooftops" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: #A78BFA;">🌃 Bangkok from Above</div>
+    <div class="section-title">Rooftop Bars</div>
+    <div class="section-line" style="background: linear-gradient(90deg, #A78BFA, transparent);"></div>
+  </div>
+
+  <div class="rooftop-grid">
+
+    <div class="rooftop-card">
+      <div class="rooftop-card-glow"></div>
+      <div class="rooftop-icon">🌿</div>
+      <div class="rooftop-card-content">
+        <div class="rooftop-name">Tichuca Rooftop Bar</div>
+        <div class="rooftop-meta">
+          <span class="rooftop-type">Garden Rooftop · 46th Floor</span>
+        </div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.3); margin-top:3px;">📍 Thong Lo · #1 Pick</div>
+      </div>
+      <div class="rooftop-reviews">6.9K</div>
+    </div>
+
+    <div class="rooftop-card">
+      <div class="rooftop-card-glow"></div>
+      <div class="rooftop-icon">🌃</div>
+      <div class="rooftop-card-content">
+        <div class="rooftop-name">Above Eleven</div>
+        <div class="rooftop-meta">
+          <span class="rooftop-type">Rooftop Bar · Peruvian-Japanese</span>
+        </div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.3); margin-top:3px;">📍 Sukhumvit</div>
+      </div>
+      <div class="rooftop-reviews">6.0K</div>
+    </div>
+
+    <div class="rooftop-card">
+      <div class="rooftop-card-glow"></div>
+      <div class="rooftop-icon">🌙</div>
+      <div class="rooftop-card-content">
+        <div class="rooftop-name">Vertigo & Moon Bar</div>
+        <div class="rooftop-meta">
+          <span class="rooftop-type">Open-Air · Banyan Tree Hotel</span>
+        </div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.3); margin-top:3px;">📍 Sathorn</div>
+      </div>
+      <div class="rooftop-reviews">4.4K</div>
+    </div>
+
+    <div class="rooftop-card">
+      <div class="rooftop-card-glow"></div>
+      <div class="rooftop-icon">🏙️</div>
+      <div class="rooftop-card-content">
+        <div class="rooftop-name">Akara Sky Hanuman Bangkok</div>
+        <div class="rooftop-meta">
+          <span class="rooftop-type">Panoramic Rooftop</span>
+        </div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.3); margin-top:3px;">📍 Charoen Krung</div>
+      </div>
+      <div class="rooftop-reviews">2.4K</div>
+    </div>
+
+    <div class="rooftop-card">
+      <div class="rooftop-card-glow"></div>
+      <div class="rooftop-icon">✨</div>
+      <div class="rooftop-card-content">
+        <div class="rooftop-name">Sky Lab Bangkok</div>
+        <div class="rooftop-meta">
+          <span class="rooftop-type">Rooftop Bar · Skyline Views</span>
+        </div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.3); margin-top:3px;">📍 Bangkok</div>
+      </div>
+      <div class="rooftop-reviews">—</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="fancy-divider"></div>
+
+<!-- ══════ NIGHTCLUB + MASSAGES ══════ -->
+<section id="more" class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: var(--neon-purple);">🌙 After Dark + Wellness</div>
+    <div class="section-title">Nightclub &<br>Massages</div>
+    <div class="section-line" style="background: linear-gradient(90deg, var(--neon-purple), transparent);"></div>
+  </div>
+
+  <div style="padding: 0 20px; margin-bottom: 14px;">
+    <div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 12px;">🎵 Nightclub</div>
+  </div>
+
+  <div class="list-container" style="padding-bottom: 20px;">
+    <div class="place-card" style="border-color: rgba(191,95,255,0.22); background: rgba(191,95,255,0.04);">
+      <div class="place-rank" style="color: var(--neon-purple);">1</div>
+      <div class="place-info">
+        <div class="place-name">Levels Club & Lounge</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: #A78BFA;">Nightclub · Multi-floor</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Sukhumvit 11</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: var(--neon-purple);">2.2K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 20px; margin-bottom: 12px;">
+    <div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 12px;">💆 Massages & Spa</div>
+  </div>
+
+  <div class="list-container">
+    <div class="place-card top-1" style="border-color: rgba(74,222,128,0.25); background: rgba(74,222,128,0.04);">
+      <div class="place-rank" style="color: #4ADE80;">1</div>
+      <div class="place-info">
+        <div class="place-name">Health Land Asoke</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: #4ADE80;">Thai Massage · Spa</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Asoke</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: #4ADE80;">8.0K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-2" style="border-color: rgba(74,222,128,0.18);">
+      <div class="place-rank" style="color: rgba(74,222,128,0.55);">2</div>
+      <div class="place-info">
+        <div class="place-name">Once Upon A Thai Spa</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: rgba(74,222,128,0.7);">Premium Spa</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: rgba(74,222,128,0.7);">4.6K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-3" style="border-color: rgba(74,222,128,0.14);">
+      <div class="place-rank" style="color: rgba(74,222,128,0.4);">3</div>
+      <div class="place-info">
+        <div class="place-name">Urban Thai Massage</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: rgba(74,222,128,0.6);">Thai Massage</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: rgba(74,222,128,0.6);">4.5K</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="fancy-divider" style="margin-top: 8px;"></div>
+
+<!-- ══════ K7AB MASSAGE ══════ -->
+<section class="fade-in">
+  <div class="section-header">
+    <div class="section-label" style="color: #4ADE80;">💆 For the Boys</div>
+    <div class="section-title">K7ab<br>Massage</div>
+    <div class="section-line" style="background: linear-gradient(90deg, #4ADE80, transparent);"></div>
+  </div>
+
+  <div style="margin: 0 20px 12px;">
+    <div style="background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.15); border-radius: 14px; padding: 14px 16px;">
+      <div style="font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+        Ranked by reviews — your go-to spots in Bangkok 😈
+      </div>
+    </div>
+  </div>
+
+  <div class="list-container" style="margin-top: 12px;">
+
+    <div class="place-card top-1" style="border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.05);">
+      <div class="place-rank" style="color: #4ADE80;">1</div>
+      <div class="place-info">
+        <div class="place-name">Wonder Massage</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: #4ADE80;">K7ab Massage</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: #4ADE80;">320</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-2" style="border-color: rgba(74,222,128,0.2);">
+      <div class="place-rank" style="color: rgba(74,222,128,0.6);">2</div>
+      <div class="place-info">
+        <div class="place-name">Don Quixote Massage</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: rgba(74,222,128,0.7);">K7ab Massage</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: rgba(74,222,128,0.7);">311</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card top-3" style="border-color: rgba(74,222,128,0.14);">
+      <div class="place-rank" style="color: rgba(74,222,128,0.45);">3</div>
+      <div class="place-info">
+        <div class="place-name">Paradise Massage</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: rgba(74,222,128,0.6);">K7ab Massage</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: rgba(74,222,128,0.55);">74</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+    <div class="place-card" style="border-color: rgba(74,222,128,0.1);">
+      <div class="place-rank" style="color: rgba(74,222,128,0.3);">4</div>
+      <div class="place-info">
+        <div class="place-name">Black Lotus</div>
+        <div class="place-meta">
+          <span class="place-type" style="color: rgba(74,222,128,0.5);">K7ab Massage</span>
+          <span class="place-dot"></span>
+          <span class="place-area">📍 Bangkok</span>
+        </div>
+      </div>
+      <div class="place-reviews-col">
+        <div class="reviews-num" style="color: rgba(74,222,128,0.4);">25</div>
+        <div class="reviews-label">reviews</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<div class="guide-footer fade-in">
+  <div class="footer-names">Ali · Maitham · Ramy</div>
+  <div class="footer-sub">Bangkok, Thailand · May 2026 🏙️</div>
+  <div class="footer-links">
+    <a href="bangkok-itinerary.html" class="f-link f-link-itinerary">← Back to Itinerary</a>
+    <a href="index.html" class="f-link f-link-home">All Destinations</a>
+  </div>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.06, rootMargin: '0px 0px -28px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
