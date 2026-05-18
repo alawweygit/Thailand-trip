@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALI · MAITHAM · RAMY — 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocean: #0ABFBC;
+    --sunset: #F97316;
+    --gold: #D4A853;
+    --palm: #4ADE80;
+    --black: #0A0A0A;
+    --off-white: #F8F6F1;
+    --neon-pink: #FF2D78;
+    --neon-purple: #BF5FFF;
+    --neon-cyan: #00F5FF;
+    /* Bangkok colors */
+    --bkk-gold: #E8B84B;
+    --bkk-red: #E53935;
+    --bkk-purple: #7C3AED;
+    --bkk-rose: #F43F5E;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--off-white);
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px 60px;
+    overflow: hidden;
+    background: radial-gradient(ellipse 100% 80% at 50% 0%, #050d1a 0%, #0a0a0a 60%);
+  }
+
+  .hero-stars {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 12%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 8%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 55% 18%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 6%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 22%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 8% 35%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 22% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 68% 48%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 65%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 60%, rgba(255,255,255,0.45) 0%, transparent 100%),
+      radial-gradient(1px 1px at 12% 72%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 60% 78%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 95% 80%, rgba(255,255,255,0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .hero-glow {
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 60%, rgba(10,191,188,0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 60%, rgba(232,184,75,0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 30% at 50% 100%, rgba(249,115,22,0.04) 0%, transparent 60%);
+  }
+
+  .hero-content { position: relative; z-index: 2; text-align: center; width: 100%; max-width: 600px; }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+  }
+
+  .hero-names {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(13px, 4vw, 18px);
+    letter-spacing: 0.35em;
+    background: linear-gradient(90deg, var(--ocean), var(--gold), var(--sunset));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 16vw, 110px);
+    line-height: 0.88;
+    letter-spacing: 0.04em;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .hero-title span {
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(16px, 4vw, 20px);
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 56px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── CITY CARDS ── */
+  .cities {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  @media (min-width: 600px) {
+    .cities { flex-direction: row; }
+  }
+
+  .city-card {
+    flex: 1;
+    border-radius: 24px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.3s ease, border-color 0.3s;
+  }
+
+  .city-card:hover { transform: translateY(-4px); }
+
+  .city-card-glow {
+    position: absolute; inset: 0; pointer-events: none;
+    border-radius: inherit;
+    transition: opacity 0.3s;
+  }
+
+  /* Phuket */
+  .city-phuket {
+    background: linear-gradient(145deg, #001a2e 0%, #000d1a 60%, #05080a 100%);
+    border-color: rgba(10,191,188,0.2);
+  }
+  .city-phuket:hover { border-color: rgba(10,191,188,0.45); }
+  .city-phuket .city-card-glow {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(10,191,188,0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 80% 20%, rgba(249,115,22,0.08) 0%, transparent 60%);
+  }
+  .city-phuket .city-accent { color: var(--ocean); }
+  .city-phuket .city-bar { background: linear-gradient(90deg, var(--ocean), var(--sunset)); }
+
+  /* Bangkok */
+  .city-bangkok {
+    background: linear-gradient(145deg, #1a0a00 0%, #0d0500 60%, #080508 100%);
+    border-color: rgba(232,184,75,0.2);
+  }
+  .city-bangkok:hover { border-color: rgba(232,184,75,0.45); }
+  .city-bangkok .city-card-glow {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232,184,75,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 20% 20%, rgba(228,57,53,0.06) 0%, transparent 60%);
+  }
+  .city-bangkok .city-accent { color: var(--bkk-gold); }
+  .city-bangkok .city-bar { background: linear-gradient(90deg, var(--bkk-gold), var(--bkk-red)); }
+
+  .city-content { position: relative; z-index: 1; }
+
+  .city-flag {
+    font-size: 28px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .city-label {
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .city-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 9vw, 52px);
+    letter-spacing: 0.04em;
+    line-height: 0.9;
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  .city-dates {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+  }
+
+  .city-bar {
+    height: 2px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    width: 48px;
+  }
+
+  .city-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .city-pill {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .city-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .city-cta-arrow {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+
+  .city-card:hover .city-cta-arrow { transform: translateX(4px); }
+
+  .city-phuket .city-cta { color: var(--ocean); }
+  .city-phuket .city-cta-arrow { background: rgba(10,191,188,0.15); border: 1px solid rgba(10,191,188,0.3); }
+  .city-bangkok .city-cta { color: var(--bkk-gold); }
+  .city-bangkok .city-cta-arrow { background: rgba(232,184,75,0.12); border: 1px solid rgba(232,184,75,0.3); }
+
+  /* ── FOOTER ── */
+  .hero-footer {
+    position: relative; z-index: 2;
+    margin-top: 48px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.18);
+    text-align: center;
+  }
+
+  /* Scroll hint */
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.25;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    animation: bounce 2.5s ease-in-out infinite;
+    z-index: 2;
+  }
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 28px;
+    background: linear-gradient(180deg, white, transparent);
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* fade in on load */
+  .hero-content { animation: fadeUp 1s ease both; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-stars"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Thailand · 2026 · Boys Trip</div>
+    <div class="hero-names">Ali · Maitham · Ramy</div>
+    <div class="hero-title"><span>CHOOSE<br>YOUR<br>CITY</span></div>
+    <div class="hero-sub">Two destinations. One legendary trip.</div>
+
+    <div class="cities">
+
+      <!-- PHUKET -->
+      <a href="phuket-itinerary.html" class="city-card city-phuket">
+        <div class="city-card-glow"></div>
+        <div class="city-content">
+          <span class="city-flag">🌴</span>
+          <span class="city-label city-accent">Day 1–5</span>
+          <div class="city-name">PHUKET</div>
+          <div class="city-dates">May 22 – 27, 2026</div>
+          <div class="city-bar"></div>
+          <div class="city-pills">
+            <span class="city-pill">Beaches</span>
+            <span class="city-pill">Phi Phi</span>
+            <span class="city-pill">Bangla Road</span>
+            <span class="city-pill">Beach Clubs</span>
+          </div>
+          <div class="city-cta">
+            <span>Explore</span>
+            <span class="city-cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- BANGKOK -->
+      <a href="bangkok-itinerary.html" class="city-card city-bangkok">
+        <div class="city-card-glow"></div>
+        <div class="city-content">
+          <span class="city-flag">🏙️</span>
+          <span class="city-label city-accent">Day 6–8</span>
+          <div class="city-name">BANGKOK</div>
+          <div class="city-dates">May 27 – 29, 2026</div>
+          <div class="city-bar"></div>
+          <div class="city-pills">
+            <span class="city-pill">Rooftops</span>
+            <span class="city-pill">Grand Palace</span>
+            <span class="city-pill">ICONSIAM</span>
+            <span class="city-pill">Skyline</span>
+          </div>
+          <div class="city-cta">
+            <span>Explore</span>
+            <span class="city-cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="hero-footer">Thailand · 2026</div>
+  <div class="scroll-hint"></div>
+</section>
+
+</body>
+</html>
